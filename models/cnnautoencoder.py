@@ -4,7 +4,7 @@ import torch.nn as nn
 
 
 class CNNAutoencoder(nn.Module):
-    """LSTMAutoencoder
+    """CNNAutoencoder
 
     Ensure that the model is always batched.
 
@@ -45,7 +45,6 @@ class CNNAutoencoder(nn.Module):
             nn.ConvTranspose1d(
                 16, input_size, kernel_size=3, stride=2, padding=1, output_padding=1
             ),  # (batch_size, input_size, sequence_length)
-            nn.Sigmoid(),
         )
 
     def forward(self, x):
